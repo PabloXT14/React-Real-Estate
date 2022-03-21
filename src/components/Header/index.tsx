@@ -1,5 +1,6 @@
 import { menuData } from "../../data/MenuData";
-import { Container, Logo, MenuBars, Navbar, NavMenu, NavMenuLinks } from "./styles";
+import { Button } from "../Button";
+import { Container, Logo, MenuBars, Navbar, NavButton, NavMenu, NavMenuLinks } from "./styles";
 
 
 export function Header() {
@@ -7,7 +8,7 @@ export function Header() {
         <Container>
             <Navbar>
                 <Logo to='/'>
-                    Rocket Real Estate
+                    Rocket Place
                 </Logo>
                 <MenuBars />
                 <NavMenu>
@@ -17,6 +18,15 @@ export function Header() {
                         </NavMenuLinks>
                     ))}
                 </NavMenu>
+                <NavButton>
+                    <Button
+                        to='/'
+                        primary={false}
+                        big={false}
+                    >
+                        Contact Us
+                    </Button>
+                </NavButton>
             </Navbar>
         </Container>
     );

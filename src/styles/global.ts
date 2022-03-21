@@ -11,6 +11,12 @@ export const GlobalStyle = createGlobalStyle`
         --color-primary: #8257E6;
         --color-secondy: #FFFFFF;
 
+        --button-bg-1: #000d1a;
+        --button-bg-2: #CD853F;
+
+        --button-text-1: #FFFFFF; 
+        --button-text-2: #000d1a;
+
         --header-background: #121214;
     }
 
@@ -25,6 +31,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        font-family: 'Roboto', sans-serif;
+
         a {
             text-decoration: none;
         }

@@ -7,9 +7,9 @@ interface ButtonProps {
 }
 
 
-export const Button = styled(Link) <ButtonProps>`
+export const Button = styled(Link)`
     background: var(
-        ${({ primary }) => (primary ? `--button-bg-1` : `--button-bg-2`)}
+        ${({ primary }: ButtonProps) => (primary ? `--button-bg-1` : `--button-bg-2`)}
     );
     white-space: nowrap;
     outline: none;
@@ -20,12 +20,12 @@ export const Button = styled(Link) <ButtonProps>`
     justify-content: center;
     align-items: center;
 
-    padding: ${({ big }) => (big ? '1rem 2.5rem' : '0.87rem 1.5rem')};
+    padding: ${({ big }: ButtonProps) => (big ? '1rem 2.5rem' : '0.87rem 1.5rem')};
     color: var(
-        ${({ primary }) => (primary ? `--button-text-1` : `--button-text-2`)}
+        ${({ primary }: ButtonProps) => (primary ? `--button-text-1` : `--button-text-2`)}
     );
 
-    font-size: ${({ big }) => (big ? '1.25rem' : '0.87rem')};
+    font-size: ${({ big }: ButtonProps) => (big ? '1.25rem' : '0.87rem')};
     font-weight: 500;
 
     cursor: pointer;

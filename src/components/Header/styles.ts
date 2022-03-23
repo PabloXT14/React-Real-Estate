@@ -5,6 +5,7 @@ import { FaBars } from 'react-icons/fa';
 export const Container = styled.header`
     position: fixed;
     width: 100%;
+    z-index: 999;
 `;
 
 
@@ -15,7 +16,6 @@ export const Navbar = styled.nav`
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    z-index: 100;
     background: var(--header-background);
     /* background: red; */
 `;

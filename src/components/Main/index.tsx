@@ -1,5 +1,16 @@
 import { Button } from "../Button";
-import { Container, Wrapper, Slide, Slider, SliderImage, SliderContent, ArrowIcon } from "./styles";
+import {
+    Container,
+    Wrapper,
+    Slide,
+    Slider,
+    SliderImage,
+    SliderContent,
+    ArrowIcon,
+    SliderButtons,
+    PrevButton,
+    NextButton
+} from "./styles";
 
 /* ===== TIPAGENS ===== */
 interface MainProps {
@@ -11,7 +22,7 @@ interface SliderType {
     price: string;
     path: string;
     label: string;
-    image: ImageData | string;
+    image: string;
     alt: string;
 }
 
@@ -24,7 +35,7 @@ export function Main({ slides }: MainProps) {
                     return (
                         <Slide key={index}>
                             <Slider>
-                                <SliderImage />
+                                <SliderImage src={slide.image} alt={slide.alt} />
                                 <SliderContent>
                                     <h2>{slide.title}</h2>
                                     <p>{slide.price}</p>
@@ -37,6 +48,10 @@ export function Main({ slides }: MainProps) {
                         </Slide>
                     );
                 })}
+                <SliderButtons>
+                    <PrevButton />
+                    <NextButton />
+                </SliderButtons>
             </Wrapper>
         </Container>
     );

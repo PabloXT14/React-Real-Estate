@@ -10,7 +10,7 @@ interface SliderProps {
     price: string;
     path: string;
     label: string;
-    image: ImageData | string;
+    image: string;
     alt: string;
 }
 

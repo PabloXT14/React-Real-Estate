@@ -18,6 +18,13 @@ export const GlobalStyle = createGlobalStyle`
         --button-text-2: #000d1a;
 
         --header-background: #121214;
+        --slider-background-gradient: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.2) 0%,
+            rgba(0, 0, 0, 0.2) 50%,
+            rgba(0, 0, 0, 0.6) 100%
+        );
+        --slider-text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
     }
 
     html {

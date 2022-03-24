@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import { Button } from "../Button";
 import {
     Container,
@@ -28,6 +29,16 @@ interface SliderType {
 
 
 export function Main({ slides }: MainProps) {
+    const [current, setCurrent] = useState(0);
+    const lenght = slides.length;
+    const timeout = useRef(null);
+
+    function handleNextSlide() {
+        setCurrent(current === lenght - 1 ? 0 : current + 1);
+        console.log(current);
+    }
+
+
     return (
         <Container>
             <Wrapper>
@@ -50,7 +61,7 @@ export function Main({ slides }: MainProps) {
                 })}
                 <SliderButtons>
                     <PrevButton />
-                    <NextButton />
+                    <NextButton onClick={handleNextSlide} />
                 </SliderButtons>
             </Wrapper>
         </Container>
